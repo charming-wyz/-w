@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>期刊文献检索平台</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 头部 -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="期刊文献平台 Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">期刊分类</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </nav>
+    <div class="login-link">
+        <a href="javascript:void(0);" id="loginBtn">登录</a>
+    </div>
+</header>
+
+<!-- 主体部分 -->
+<div class="container">
+    <aside class="sidebar">
+        <h2>期刊检索</h2>
+        <form id="searchForm">
+            <!-- 期刊分类 -->
+            <label for="categorySelect">期刊分类：</label>
+            <select id="categorySelect" name="categorySelect">
+                <option value="教育类">教育类</option>
+                <option value="经管类">经管类</option>
+                <option value="文艺类">文艺类</option>
+                <option value="传媒类">传媒类</option>
+                <option value="建筑类">建筑类</option>
+                <option value="科技类">科技类</option>
+                <option value="综合类">综合类</option>
+                <option value="农业类">农业类</option>
+                <option value="医学类">医学类</option>
+                <option value="体育类">体育类</option>
+                <option value="交通类">交通类</option>
+                <option value="水利类">水利类</option>
+                <option value="学报类">学报类</option>
+                <option value="核心类">核心类</option>
+                <option value="外文类">外文类</option>
+                <option value="报纸类">报纸类</option>
+                <option value="书评/作品">书评/作品</option>
+                <option value="网媒类">网媒类</option>
+            </select>
+            
+            <!-- 出版周期 -->
+            <label for="cycleSelect">出版周期：</label>
+            <select id="cycleSelect" name="cycleSelect">
+                <option value="月刊">月刊</option>
+                <option value="季刊">季刊</option>
+                <option value="年刊">年刊</option>
+            </select>
+            
+            <!-- 收录网站 -->
+            <label for="websiteSelect">收录网站：</label>
+            <select id="websiteSelect" name="websiteSelect">
+                <option value="CNKI">CNKI</option>
+                <option value="百度学术">百度学术</option>
+                <option value="维普">维普</option>
+            </select>
+
+            <!-- 期刊级别 -->
+            <label for="levelSelect">期刊级别：</label>
+            <select id="levelSelect" name="levelSelect">
+                <option value="A类">A类</option>
+                <option value="B类">B类</option>
+                <option value="C类">C类</option>
+            </select>
+
+            <!-- 期刊批次 -->
+            <label for="batchSelect">期刊批次：</label>
+            <select id="batchSelect" name="batchSelect">
+                <option value="一批">一批</option>
+                <option value="二批">二批</option>
+                <option value="三批">三批</option>
+            </select>
+            
+            <!-- 期刊排序 -->
+            <label for="sortSelect">期刊排序：</label>
+            <select id="sortSelect" name="sortSelect">
+                <option value="按影响因子排序">按影响因子排序</option>
+                <option value="按下载量排序">按下载量排序</option>
+            </select>
+
+            <!-- 搜索框 -->
+            <label for="keyword">关键词：</label>
+            <input type="text" id="keyword" name="keyword" placeholder="请输入关键词...">
+            
+            <button type="submit">检索</button>
+        </form>
+    </aside>
+
+    <!-- 搜索结果 -->
+    <section class="content">
+        <h2>检索结果</h2>
+        <div id="searchResults"></div>
+    </section>
+</div>
+
+<!-- 登录框 -->
+<div class="login-form" id="loginForm" style="display: none;">
+    <h3>用户登录</h3>
+    <form id="login">
+        <label for="username">用户名:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">密码:</label>
+        <input type="password" id="password" name="password">
+        <button type="submit">登录</button>
+    </form>
+</div>
+
+<!-- 页脚 -->
+<footer>
+    <p>&copy; 2024 期刊文献检索平台. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
